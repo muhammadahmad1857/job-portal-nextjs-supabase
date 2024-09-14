@@ -73,7 +73,7 @@ const Header = () => {
       </nav>
       {showSignIn && (
         <div
-          className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50"
+          className="fixed inset-0 flex z-50 items-center justify-center bg-black bg-opacity-50"
           onClick={handleOverlayClick}
         >
           <SignIn

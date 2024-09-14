@@ -1,8 +1,8 @@
 "use client";
 import { useUser } from "@clerk/nextjs";
-import { usePathname, useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 import React from "react";
-
+// usePathname
 const ProtectedRoute = ({
   children,
 }: Readonly<{
@@ -10,7 +10,7 @@ const ProtectedRoute = ({
 }>) => {
   // user
   const { isSignedIn, isLoaded } = useUser();
-//   const pathname = usePathname();
+  //   const pathname = usePathname();
   const router = useRouter();
 
   if (isLoaded && !isSignedIn && isSignedIn !== undefined) {
